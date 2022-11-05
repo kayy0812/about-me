@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;1,300;1,700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -16,13 +14,15 @@ code {
     font-weight: 500;
 }
 
+/* Loading background */
 .loading-bg {
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgb(43, 57, 142);
+    z-index: 10;
+    animation: .5s fadeOut 2s linear forwards;
 }
 
 .loading-label {
@@ -30,7 +30,7 @@ code {
     top: -32px;
     left: -4px;
     font-size: 2rem;
-    color: #fff;
+    color: var(--loading-color);
 }
 
 .loading-track {
@@ -40,8 +40,8 @@ code {
     transform: translate(-50%, -50%);
     width: 400px;
     height: 20px;
-    border: 3px solid rgb(229, 229, 222);
-    border-radius: 8px;
+    border: 3px solid var(--loading-color);
+    border-radius: 6px;
 }
 
 .loading-thumb {
@@ -50,16 +50,103 @@ code {
     left: 1px;
     width: calc(100% - 2px);
     height: 12px;
-    background-color: #fff;
+    background-color: var(--loading-color);
     animation: 2s loading 1;
-    border-radius: 8px
+    border-radius: 4px
 }
 
-@keyframes loading {
-    from {
-        width: calc(1% - 2px);
-    }
-    to {
-        width: calc(100% - 2px);
-    }
+/* Door background */
+.bg-door {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+}
+
+.bg-door-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    background-color: rgb(29, 35, 114);
+    animation: 1.5s doorToLeft 2s forwards, 2s doorBorderRadiusLeft 2s forwards;
+}
+
+.bg-door-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    background-color: rgb(29, 35, 114);
+    animation: 1.5s doorToRight 2s forwards, 2s doorBorderRadiusRight 2s forwards;
+}
+
+/* Panel */
+.panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 8;
+    animation: 2s bottomToCenter 2s forwards ease;
+}
+
+.panel-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgba(29, 35, 114, .3);
+}
+
+.panel-circle-first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: rgba(29, 35, 114, .8);
+}
+
+.panel-circle-item {
+    position: absolute;
+    width: 200px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: 1s var(--type) alternate infinite ease-in-out;
+
+}
+
+.panel-circle-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -25px;
+    width: calc(var(--scale) * 10px);
+    height: calc(var(--scale) * 10px);;
+    border-radius: 50%;
+    background-color: rgba(29, 35, 114, 1);
+}
+
+.panel-circle-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-size: cover;
+    background-image: var(--bg-url);
 }

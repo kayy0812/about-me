@@ -1,0 +1,93 @@
+/* General */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    } 
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    } 
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Loading keyframes */
+@keyframes loading {
+    from {
+        width: calc(1% - 2px);
+    }
+    to {
+        width: calc(100% - 2px);
+    }
+}
+
+/* Door background */
+@keyframes doorToLeft {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    } 
+    to {
+        transform: translate(-100%);
+        opacity: .1;
+    }
+}
+
+@keyframes doorToRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    } 
+    to {
+        transform: translate(100%);
+        opacity: .1;
+    }
+}
+
+@keyframes doorBorderRadiusLeft {
+    from {
+        border-top-right-radius: 0;
+        border-bototm-right-radius: 0;
+    } 
+    to {
+        border-top-right-radius: 100%;
+        border-bottom-right-radius: 100%;
+    }
+}
+
+@keyframes doorBorderRadiusRight {
+    from {
+        border-top-left-radius: 0;
+        border-bototm-left-radius: 0;
+    } 
+    to {
+        border-top-left-radius: 100%;
+        border-bottom-left-radius: 100%;
+    }
+}
+
+/* Panel */
+@keyframes bottomToCenter {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    } to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateSmallBall {
+    from {
+        transform: translate(-50%, -50%) rotate(180deg);
+    } to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
