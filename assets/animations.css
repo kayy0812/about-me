@@ -84,10 +84,63 @@
     }
 }
 
-@keyframes rotateSmallBall {
+@keyframes rotateBar {
     from {
-        transform: translate(-50%, -50%) rotate(180deg);
+        transform: translate(-50%, -50%) rotate(0deg);
     } to {
         transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes circleScale {
+    0% {
+        width: 200px;
+        height: 200px;
+    }
+    50% {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+    }
+    100% {
+        width: 505px;
+        height: 145px;
+        border-radius: 32px;
+    }
+}
+
+@keyframes changeFirstCircle {
+    from {
+        width: 140px;
+        border-radius: 50%;
+        background-color: rgba(29, 35, 114, .8);
+    } to {
+        width: 500px;
+        border-radius: 32px;
+        background-color: rgba(29, 35, 114, .4);
+    }
+}
+
+@keyframes changeImg {
+    from {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        margin-left: 5px;
+    }
+    to {
+        width: 120px;
+        height: 120px;
+        border-radius: 32px;
+        margin-left: 10px;
+    }
+}
+
+@keyframes nameFadeIn {
+    from {
+        font-size: 0rem;
+    } to {
+        font-size: 2.4rem;
+        margin-left: 32px;
     }
 }

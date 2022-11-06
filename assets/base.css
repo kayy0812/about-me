@@ -3,4 +3,7 @@
 :root {
     /* Loading */
     --loading-color: rgb(222, 222, 222);
+
+    /* General */
+    --text-color: rgb(206, 206, 206);
 }
