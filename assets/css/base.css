@@ -7,3 +7,11 @@
     /* General */
     --text-color: rgb(206, 206, 206);
 }
+
+/* Reset */
+button {
+    outline: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.4rem;
+}

@@ -121,7 +121,22 @@ code {
     background-color: rgba(29, 35, 114, .8);
     z-index: 1;
     animation: 1s changeFirstCircle 6s forwards;
-    box-shadow: -4px 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 1px 10px rgb(79, 79, 80);
+    transition: all 1s ease;
+}
+
+.panel-circle-first--on-btn-hover {
+    animation: 1s circleToSmall ease forwards, 1s circleFadeOut 1.5s ease forwards;
+}
+
+.panel-circle-first--on-btn-hover 
+.panel-circle-first {
+    animation: 1s circleToSmall ease forwards;
+}
+
+.panel-circle-first--on-btn-hover  
+.panel-circle-img {
+    animation: 1s circleImgFadeOut ease forwards;
 }
 
 .panel-circle-item {
@@ -150,10 +165,34 @@ code {
 /* Digital clock */
 .digital-clock {
     position: fixed;
-    bottom: 25%;
+    bottom: 0;
     left: 50%;
     transform: translate(-50%, 100%);
     font-size: 4rem;
     font-weight: 600;
-    color: rgb(83, 83, 83);
+    color: rgb(97, 73, 162);
+    animation: 1s clockTranslateY 6s forwards;
+}
+
+/* Button start */
+.start {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    background-color: rgba(241, 241, 241, 1);
+    border: 1px solid rgb(54, 73, 143);
+    color: rgb(54, 73, 143);
+    font-size: 3rem;
+    padding: 10px 24px;
+    border-radius: 8px;
+    animation: 1s buttonTranslateY 6.5s forwards;
+    transition: transform .5s ease, box-shadow .5s ease;
+    z-index: 11;
+}
+
+.start:hover {
+    cursor: pointer;
+    transform: translate(calc(-50% + 2px), 100%);
+    box-shadow: -4px -1px 10px rgb(78, 78, 78);
 }

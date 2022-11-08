@@ -144,3 +144,59 @@
         margin-left: 32px;
     }
 }
+
+@keyframes circleToSmall {
+    from {
+        width: 230px;
+        height: 230px;
+        border-radius: 32px;
+    } to {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+}
+
+@keyframes circleImgFadeOut {
+    from {
+        width: 200px;
+        height: 200px;
+        opacity: 1;
+    } to {
+        height: 0;
+        width: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes circleFadeOut {
+    from {
+        top: 50%;
+        opacity: 1;
+    } to {
+        top: 0;
+        opacity: 0;
+    }
+}
+
+/* Clock */
+@keyframes clockTranslateY {
+    from {
+        bottom: 0;
+        opacity: 0;
+    } to {
+        bottom: 25%;
+        opacity: 1;
+    }
+}
+
+/* Clock */
+@keyframes buttonTranslateY {
+    from {
+        bottom: 0;
+        opacity: 0;
+    } to {
+        bottom: 15%;
+        opacity: 1;
+    }
+}
