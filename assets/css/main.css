@@ -38,7 +38,7 @@ code {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
+    width: calc(50vw);
     height: 20px;
     border: 3px solid var(--loading-color);
     border-radius: 6px;
@@ -146,7 +146,7 @@ code {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(29, 35, 114, .4);
+    background-color: var(--primary-color-opacity);
     animation: 1s var(--type) infinite ease-in-out, 1s fadeOut 5s forwards;
     z-index: 0;
 
@@ -214,10 +214,21 @@ code {
     left: -15px;
     width: calc(100vw + 30px);
     height: calc(100vh + 30px);
-    background-image: url(../img/wallpapers/preload-bg.jpg);
-    background-position: 50% 0;
+    background-image: url(../img/wallpapers/492493.jpg);
+    background-position: 50%;
     background-repeat: no-repeat;
-    filter: blur(8px);
+    background-size: cover;
+    filter: blur(8px) grayscale(100%);
     opacity: 0;
-    animation: .5s blurBg 6s forwards;
+    animation: .5s ease blurBg 6s forwards;
+    transition: all .5s ease-in-out;
+}
+
+.blur-bg.blur-bg--fade-out {
+    animation: 1s ease blurBgFadeOut forwards;
+}
+
+.start:hover + .blur-bg {
+    filter: blur(3px) grayscale(0);
+    transition: all .5s ease-in-out;
 }
