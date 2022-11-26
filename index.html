@@ -14,29 +14,38 @@
 
     </header>
     <div class="container">
-        <div class="loading-bg">
-            <div class="loading-track">
-                <span class="loading-label">
-                    <code>Loading ...</code>
-                </span>
-                <div class="loading-thumb"></div>
-            </div>
-        </div>
-        <div class="bg-door">
-            <div class="bg-door-left"></div>
-            <div class="bg-door-right"></div>
-        </div>
-        <div class="panel">
-            <div class="panel-circle">
-                <div class="panel-circle-first">
-                    <div class="panel-circle-img" style="--bg-url: url(https://avatars.githubusercontent.com/u/30899127?s=400&u=4147733d98c4bac91550c2708009d17ede8017f3&v=4)"></div>
+        <!-- Before page -->
+        <div class="preload">
+            <div class="loading-bg">
+                <div class="loading-track">
+                    <span class="loading-label">
+                        <code>Loading ...</code>
+                    </span>
+                    <div class="loading-thumb"></div>
                 </div>
-                <div class="panel-circle-item" style="--scale: 2; --type: rotateBar"></div>
-                
             </div>
+            <div class="bg-door">
+                <div class="bg-door-left"></div>
+                <div class="bg-door-right"></div>
+            </div>
+            <div class="panel">
+                <div class="panel-circle">
+                    <div class="panel-circle-first">
+                        <div class="panel-circle-img" style="--bg-url: url(https://avatars.githubusercontent.com/u/30899127?s=400&u=4147733d98c4bac91550c2708009d17ede8017f3&v=4)"></div>
+                    </div>
+                    <div class="panel-circle-item" style="--scale: 2; --type: rotateBar"></div>
+                    
+                </div>
+            </div>
+            <code id="clock" class="digital-clock"></code>
+            <button class="start">Start ➤</button>
+            <div class="blur-bg"></div>
         </div>
-        <code id="clock" class="digital-clock"></code>
-        <button class="start">Start ➤</button>
+
+        <!-- After -->
+        <div class="after">
+            
+        </div>
     </div>
     <footer class="footer">
 

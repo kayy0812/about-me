@@ -11,11 +11,11 @@ function Time() {
     minute = update(minute);
     second = update(second);
     document.getElementById("clock").innerText = hour + " : " + minute + " : " + second + " " + period;
-    setInterval(Time, 1000);
 }
 
 function update(t) {
     return t < 10 ? "0" + t : t;
 }
 
-Time();
+var time = setInterval(Time, 1000);
+

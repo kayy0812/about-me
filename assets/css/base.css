@@ -6,6 +6,8 @@
 
     /* General */
     --text-color: rgb(206, 206, 206);
+    --primary-color: #5157a9;
+    --primary-color-opacity: #5157a984;
 }
 
 /* Reset */

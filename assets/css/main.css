@@ -71,7 +71,7 @@ code {
     left: 0;
     bottom: 0;
     width: 50%;
-    background-color: rgb(29, 35, 114);
+    background-color: var(--primary-color);
     animation: 1.5s doorToLeft 2s forwards, 2s doorBorderRadiusLeft 2s forwards;
 }
 
@@ -81,7 +81,7 @@ code {
     right: 0;
     bottom: 0;
     width: 50%;
-    background-color: rgb(29, 35, 114);
+    background-color: var(--primary-color);
     animation: 1.5s doorToRight 2s forwards, 2s doorBorderRadiusRight 2s forwards;
 }
 
@@ -100,12 +100,13 @@ code {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -75%);
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-color: rgba(29, 35, 114, .3);
+    background-color: var(--primary-color-opacity);
     animation: 1s circleScale 5s forwards;
+    box-shadow: 0 0 10px #fff;
 }
 
 .panel-circle-first {
@@ -118,15 +119,14 @@ code {
     width: 140px;
     height: 140px;
     border-radius: 50%;
-    background-color: rgba(29, 35, 114, .8);
+    background-color: var(--primary-color);
     z-index: 1;
     animation: 1s changeFirstCircle 6s forwards;
-    box-shadow: 0px 1px 10px rgb(79, 79, 80);
     transition: all 1s ease;
 }
 
 .panel-circle-first--on-btn-hover {
-    animation: 1s circleToSmall ease forwards, 1s circleFadeOut 1.5s ease forwards;
+    animation: 1s circleToSmall ease forwards, 1s circleFadeOut 1s ease forwards;
 }
 
 .panel-circle-first--on-btn-hover 
@@ -168,10 +168,15 @@ code {
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 100%);
-    font-size: 4rem;
+    font-size: 2.8rem;
     font-weight: 600;
-    color: rgb(97, 73, 162);
+    color: var(--text-color);
     animation: 1s clockTranslateY 6s forwards;
+    z-index: 1;
+}
+
+.digital-clock.digital-clock--fade-out {
+    animation: 1s ease-in-out clockFadeOut;
 }
 
 /* Button start */
@@ -180,9 +185,9 @@ code {
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 100%);
-    background-color: rgba(241, 241, 241, 1);
-    border: 1px solid rgb(54, 73, 143);
-    color: rgb(54, 73, 143);
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    color: var(--text-color);
     font-size: 3rem;
     padding: 10px 24px;
     border-radius: 8px;
@@ -191,8 +196,28 @@ code {
     z-index: 11;
 }
 
+.start.start--fade-out {
+    animation: .5s buttonFadeOut ease-in-out;
+}
+
 .start:hover {
     cursor: pointer;
     transform: translate(calc(-50% + 2px), 100%);
     box-shadow: -4px -1px 10px rgb(78, 78, 78);
+}
+
+/* Blue background */
+.blur-bg {
+    z-index: 0;
+    position: fixed;
+    top: -15px;
+    left: -15px;
+    width: calc(100vw + 30px);
+    height: calc(100vh + 30px);
+    background-image: url(../img/wallpapers/preload-bg.jpg);
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    filter: blur(8px);
+    opacity: 0;
+    animation: .5s blurBg 6s forwards;
 }
